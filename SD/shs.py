@@ -134,8 +134,8 @@ def SHs(classes,
     model = setup_model(config_path, ckpt_path, device)
     criteria = torch.nn.MSELoss()
     forget_dl, remain_dl = setup_nsfw_data(
-        batch_size, forget_path='./dataFolder/NSFW',
-        remain_path='./dataFolder/NotNSFW', image_size=image_size)
+        batch_size, forget_path='./data/NSFW',
+        remain_path='./data/NotNSFW', image_size=image_size)
 
     # choose parameters to train based on train_method
     parameters = []
